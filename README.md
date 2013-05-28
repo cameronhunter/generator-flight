@@ -232,9 +232,9 @@ Shortcut that runs `flight:app`, `flight:component my_component`, and
 
 ### flight:package
 
-Scaffolds a Flight application file structure, installs all the library code
-you need, and correctly configures your test setup. The app generator will
-prompt you to optionally install Twitter Bootstrap or Normalize.css.
+Scaffolds a Flight package file structure, installs all the library code
+you need, and correctly configures your test setup. The result is a Flight
+component that can be registered in Bower.
 
 Example:
 
