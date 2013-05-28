@@ -135,4 +135,43 @@ describe('Flight generator test', function () {
       helpers.assertGeneratorMakesExpected(flightPage, expected, cb);
     });
   });
+
+  describe('flight:package', function () {
+    var flightPackage;
+
+    beforeEach(function (cb) {
+      var deps = ['../../lib/generators/package'];
+      flightPackage = helpers.createGenerator('flight:package', deps, ['foo']);
+      flightPackage.options['skip-install'] = true;
+      cb();
+    });
+
+    it('runs sucessfully', function () {
+      flightPackage.run();
+    });
+
+    it('creates expected files', function (cb) {
+      var expected = [
+        // dotfiles
+        '.bowerrc',
+        '.gitignore',
+        '.gitattributes',
+        '.jshintrc',
+        // config files
+        'bower.json',
+        'karma.conf.js',
+        'package.json',
+        // docs
+        'CONTRIBUTING.md',
+        'README.md',
+        // lib
+        'lib/foo.js',
+        // test
+        'test/spec/foo.spec.js',
+        'test/test-main.js'
+      ];
+
+      helpers.assertGeneratorMakesExpected(flightPackage, expected, cb);
+    });
+  });
 });
