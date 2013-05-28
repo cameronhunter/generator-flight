@@ -230,7 +230,7 @@ Shortcut that runs `flight:app`, `flight:component my_component`, and
 `flight:mixin my_component`.
 
 
-### flight:app
+### flight:package
 
 Scaffolds a Flight application file structure, installs all the library code
 you need, and correctly configures your test setup. The app generator will
