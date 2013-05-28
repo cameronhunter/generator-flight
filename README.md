@@ -55,6 +55,7 @@ Available generators (to be run in the root directory of the application).
 * `flight:mixin <mixin-name>`
 * `flight:page <page-name>`
 * `flight:all`
+* `flight:package <package-name>`
 
 ### flight:app
 
@@ -227,6 +228,44 @@ define(function (require) {
 
 Shortcut that runs `flight:app`, `flight:component my_component`, and
 `flight:mixin my_component`.
+
+
+### flight:app
+
+Scaffolds a Flight application file structure, installs all the library code
+you need, and correctly configures your test setup. The app generator will
+prompt you to optionally install Twitter Bootstrap or Normalize.css.
+
+Example:
+
+```
+yo flight:package flight-foo
+```
+
+Produces:
+
+```
+.
+├── bower_components
+├── lib
+│   └── flight-foo.js
+├── node_modules
+├── test
+│   ├── spec
+│   │   └── flight-foo.spec.js
+│   └── test-main.js
+├── .bowerrc
+├── .gitattributes
+├── .gitignore
+├── .jshintrc
+├── .travis.yml
+├── CONTRIBUTING.md
+├── LICENSE.md
+├── README.md
+├── bower.json
+├── karma.conf.js
+└── package.json
+```
 
 
 ## Locally installed software
